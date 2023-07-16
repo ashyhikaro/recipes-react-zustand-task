@@ -1,0 +1,42 @@
+.recipe {
+    height: 18%;
+    display: flex;
+    margin-bottom: 14px;
+    padding: 12px;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.recipe::-webkit-scrollbar{
+    display: none;
+}
+
+.recipe_img__wrapper {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.recipe_img {
+    height: 100%;
+    width: auto;
+}
+
+.recipe_disc {
+    margin-left: 12px;
+    width: calc(100% - 60px - 12px);
+}
+
+.recipe_name {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.recipe_description {
+    width: 100%;
+}
+
+.recipe_span {
+    font-weight: 600;
+}

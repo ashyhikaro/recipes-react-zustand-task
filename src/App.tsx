@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, HashRouter } from 'react-router-dom'
+import { useState } from 'react'
+
+import { RecipesPage } from './components/recipes/Recipes.page';
+import { RecipePage } from './components/recipe/Recipe.page';
+import { Recipe } from './components/recipeCard/RecipeType';
 
 function App() {
+  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HashRouter>
+        <Routes>
+            <Route path='/' element={<RecipesPage setSelectedRecipe={setSelectedRecipe} />} />
+            <Route path='/recipe_details' element={<RecipePage selectedRecipe={selectedRecipe} />} />
+        </Routes>
+      </HashRouter>
     </div>
+    
   );
 }
 

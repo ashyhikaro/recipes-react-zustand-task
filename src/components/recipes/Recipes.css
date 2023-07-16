@@ -1,0 +1,41 @@
+.wrapper {
+    position: relative;
+}
+
+.delete_btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(213, 73, 48);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: background-color 0.24s ease-out;
+    text-transform: uppercase;
+}
+
+.delete_btn:hover {
+    background-color: rgb(185, 65, 44);
+}
+
+.recipes_wrapper {
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+    width: 50%;
+    margin: auto;
+}
+
+.recipes_wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.recipes_title {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(26, 26, 26);
+    letter-spacing: 0.3em;
+    margin-bottom: 15px;
+}
